@@ -1,0 +1,65 @@
+<h1 class="ml-5">Enter your Personal Detals </h1>
+<form class="myform p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"
+[formGroup]="registrationForm">
+    <div form-group >
+      <label >
+        Name:
+      </label>
+        <input  [class.is-invalid]="registrationForm.get('name')?.invalid &&
+        registrationForm.get('name')?.touched "
+        [class.is-valid]="registrationForm.get('name')?.valid &&
+        registrationForm.get('name')?.untouched " class="form-control " type="text" formControlName="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div form-group>
+          <label>
+            Emial:
+          </label>
+            <input  [class.is-invalid]="registrationForm.get('email')?.invalid &&
+            registrationForm.get('email')?.touched "
+            [class.is-valid]="registrationForm.get('email')?.valid &&
+            registrationForm.get('email')?.untouched " class="form-control" type="email" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+    </div>
+    <div form-group>
+      <label>
+          Message:
+      </label>
+      <input  [class.is-invalid]="registrationForm.get('message')?.invalid &&
+      registrationForm.get('message')?.touched "
+      [class.is-valid]="registrationForm.get('message')?.valid &&
+      registrationForm.get('message')?.untouched " class="form-control" type="text" formControlName="message" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+  
+  <div [formGroup]="myDetails" >
+      <div form-group>
+        <label>
+           city
+        </label>
+        <input  [class.is-invalid]="myDetails.get('city')?.invalid &&
+        myDetails.get('city')?.touched "
+        [class.is-valid]="myDetails.get('city')?.valid &&
+        myDetails.get('city')?.untouched " class="form-control" type="text" formControlName="city" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div form-group>
+        <label>
+          State
+        </label>
+        <input  [class.is-invalid]="myDetails.get('State')?.invalid &&
+        myDetails.get('State')?.touched "
+        [class.is-valid]="myDetails.get('State')?.valid &&
+        myDetails.get('State')?.untouched " class="form-control" type="text" formControlName="State" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div form-group>
+        <label>
+            Comments:
+        </label>
+        <input  [class.is-invalid]="myDetails.get('comment')?.invalid &&
+        myDetails.get('comment')?.touched "
+        [class.is-valid]="myDetails.get('comment')?.valid &&
+        myDetails.get('comment')?.untouched " class="form-control" type="text" formControlName="comment" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+  </div>
+    <button type="submit">Send</button>
+    <!-- <h1>{{registrationForm.value | json}}</h1> -->
+    <!-- <h1>{{myDetails.value | json}}</h1> -->
+  
